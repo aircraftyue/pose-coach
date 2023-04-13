@@ -3,15 +3,18 @@
 ## Usage
 
 ```bash
-# you can download better but larger model by running 'models/download_cmu.sh'
-# change model's path in 'openpose_COCO.py' at line 30
+# (Optional) You can download better but larger model by running 'models/download_cmu.sh'
+# then change model's path in 'openpose_COCO.py' at line 30
 
-# put video into 'data/records'
+# 1. Put detecting video into 'data/records'
 
-# extract pose from video
-python openpose_COCO.py --input data/records/record_0.mov
+# 2. Extract pose from video (two methods here, choose one)
+# OpenPose method
+python openpose_COCO.py --input data/records/{your_video_name}
+# OR use MediaPipe method to get better result
+python mediapipe_video.py
 
-# convert frames to video
+# 3. Convert detected frames to mp4 format
 python frame2video.py
 # you'll get video in 'data/output/videos'
 ```
@@ -19,5 +22,5 @@ python frame2video.py
 ## Requirements
 
 ```bash
-pip install opencv-python numpy argparse moviepy
+pip install opencv-python numpy argparse moviepy mediapipe
 ```
