@@ -1,3 +1,9 @@
+# Pose Coach
+data/records/**.mov
+data/records/**.mp4
+data/output/frames/**.png
+data/output/videos/**.mp4
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
