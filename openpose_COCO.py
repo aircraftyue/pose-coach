@@ -27,7 +27,7 @@ POSE_PAIRS = [ ["Neck", "RShoulder"], ["Neck", "LShoulder"], ["RShoulder", "RElb
 inWidth = args.width
 inHeight = args.height
 
-net = cv.dnn.readNetFromTensorflow("models/graph_opt_cmu.pb")
+net = cv.dnn.readNetFromTensorflow("models/graph_opt_mobile.pb")
 
 cap = cv.VideoCapture(args.input if args.input else 0)
 
